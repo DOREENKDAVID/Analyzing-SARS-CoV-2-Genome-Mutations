@@ -13,21 +13,22 @@ Analyzing SARS-CoV-2 Genome Mutations
 - [Team](#Team)
 - [Acknowledgment](#Acknowledgment)
 
-## 🚀 Project Overview
+## 🚀 Introduction
 
 In this project, we perform a **comparative genomic analysis** of SARS-CoV-2 sequences from different countries.  
 We’ll download viral genomes, align them, identify mutations, and visualize the results — gaining practical experience in genome analysis and viral evolution tracking.
 
 ---
+## objectives
 
-## ⚙️ Steps to Follow
 
+## Data
 ### 1️⃣ Download the Data
 - Visit [**NCBI Virus**](https://www.ncbi.nlm.nih.gov/labs/virus/) or [**GISAID**](https://www.gisaid.org/) (requires signup).
 - Search for **SARS-CoV-2 complete genomes**.
 - Download 2–3 genome sequences from different countries in **FASTA format**.
 - eg. [**Acessions**](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Severe%20acute%20respiratory%20syndrome%20coronavirus%202,%20taxid:2697049&Country_s=India)
-
+## ⚙️  Workflow
 Example:
 ```bash
 grep ">" *.fasta
@@ -46,7 +47,7 @@ Kenya.fasta:>OR099085.1
 cat India.fasta Kenya.fasta Germany.fasta > all_sequences.fasta
 ```
 
-2️⃣ Align the Genomes
+## 2️⃣ Align the Genomes
 
 Use MAFFT [**online**](https://mafft.cbrc.jp/alignment/server/) or Clustal Omega for multiple sequence alignment (MSA).
 ```bash
@@ -56,7 +57,7 @@ output
 ![alignment](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/MAFFTMSAViewer.png)
 
 
-4️⃣ Focus on the Spike Gene
+## 3️⃣ Focus on the Spike Gene
 
 The Spike (S) protein gene is located between positions 21,563–25,384 in the SARS-CoV-2 genome.
 Extract it using SeqKit
@@ -69,11 +70,14 @@ Then translate to amino acid sequences:
 ```bash
 seqkit translate spike_all.fasta > spike_protein.fasta
 ```
-5️⃣ Visualize the Mutations
-use [**nextstrain**](https://clades.nextstrain.org)
-upload your sequences
-![alignment to ref]()
+## 4️⃣ Visualize the Mutations
+use [**nextstrain**](https://clades.nextstrain.org) and upload your sequences 
+
+![alignment to ref](alignment_to_ref.png)
+![mutations](mutations.png)
 ![phylogenetic tree](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/phylogenetic%20tree.svg)
+
+## 5️⃣
 
 
 
