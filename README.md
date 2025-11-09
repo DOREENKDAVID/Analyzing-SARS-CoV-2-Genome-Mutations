@@ -73,7 +73,7 @@ seqkit translate spike_all.fasta > spike_protein.fasta
 use [**nextstrain**](https://clades.nextstrain.org)
 upload your sequences
 ![alignment to ref]()
-![phylogenetic tree](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/phylogenetic tree.svg)
+![phylogenetic tree](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/phylogenetic%20tree.svg)
 
 
 
