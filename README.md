@@ -41,7 +41,7 @@ Use MAFFT [**online**](https://mafft.cbrc.jp/alignment/server/) or Clustal Omega
 mafft --auto all_sequences.fasta > SARS_COV2_alignment.fasta
 ```
 output
-[**alignment**]
+[**alignment**](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/MAFFTMSAViewer.png)
 
 
 
