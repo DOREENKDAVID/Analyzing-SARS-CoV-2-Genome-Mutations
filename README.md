@@ -1,6 +1,18 @@
 # Analyzing-SARS-CoV-2-Genome-Mutations
 Analyzing SARS-CoV-2 Genome Mutations
 
+
+## Table of Contents
+- [Introduction](#Introduction)
+- [Objectives](#Objectives)
+- [Data](#Data)
+- [Workflow](#Workflow)
+- [Results](#Results)
+- [Reproducibility](#Reproducibility)
+- [Discussion](#Discussion)
+- [Team](#Team)
+- [Acknowledgment](#Acknowledgment)
+
 ## 🚀 Project Overview
 
 In this project, we perform a **comparative genomic analysis** of SARS-CoV-2 sequences from different countries.  
@@ -41,8 +53,27 @@ Use MAFFT [**online**](https://mafft.cbrc.jp/alignment/server/) or Clustal Omega
 mafft --auto all_sequences.fasta > SARS_COV2_alignment.fasta
 ```
 output
-[**alignment**](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/MAFFTMSAViewer.png)
+![alignment](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/MAFFTMSAViewer.png)
 
+
+4️⃣ Focus on the Spike Gene
+
+The Spike (S) protein gene is located between positions 21,563–25,384 in the SARS-CoV-2 genome.
+Extract it using SeqKit
+:
+```bash
+seqkit subseq -r 21563:25384 all_sequences.fasta > spike_all.fasta
+```
+
+Then translate to amino acid sequences:
+```bash
+seqkit translate spike_all.fasta > spike_protein.fasta
+```
+5️⃣ Visualize the Mutations
+use [**nextstrain**](https://clades.nextstrain.org)
+upload your sequences
+![alignment to ref]()
+![phylogenetic tree](https://github.com/DOREENKDAVID/Analyzing-SARS-CoV-2-Genome-Mutations/blob/main/phylogenetic_tree.html)
 
 
 
